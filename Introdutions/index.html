@@ -17,6 +17,16 @@
     Hover you mouse over me for a few second to see my dydamically bound title!
   </span>
  </div>
+ <div id="app3">
+  <span v-if="seen"> {{ message }} </span>
+ </div>
+ <div id="app4">
+   <ol>
+     <li v-for="todo in todos">
+       {{ todo.text}}
+     </li>
+   </ol>
+ </div>
 </body>
 <script>
   var app = new Vue({
@@ -31,5 +41,32 @@
       message: 'You loaded this page on ' + new Date().toLocaleString()
     }
   })
+  var app3 = new Vue({
+    el: '#app3',
+    data: {
+      seen: true,
+      message: 'hello world'
+    }
+  })
+  var app4 = new Vue({
+    el: '#app4',
+    data: {
+      todos: [
+      {
+        text: 'learn javascript'
+      },
+      {
+        text: 'learn php',
+      },
+      {
+        text: 'learn react'
+      },
+      {
+        text: 'learn python'
+      }
+      ]
+    }
+  })
+
 </script>
 </html>
