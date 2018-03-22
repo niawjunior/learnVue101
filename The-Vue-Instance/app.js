@@ -1,8 +1,18 @@
 new Vue({
+  el: '#app',
   data: {
-    a: 1
+    counter: 0
   },
-  created: function() {
-    console.log('a is' + this.a)
+  beforeCreate() {
+    console.log('Nothing gets called before me!')
+  },
+  updated() {
+    // Fired every second, should always be true
+    console.log(this.counter)
+  },
+  created() {
+    setInterval(() => {
+      this.counter++
+    }, 1000)
   }
 })
