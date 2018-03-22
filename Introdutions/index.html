@@ -41,6 +41,17 @@
    <p> {{ message }} </p>
    <input v-model="message">
  </div>
+
+ <div id="app7">
+    <ol>
+      <todo-item
+        v-for="item in List"
+        v-bind:todo="item"
+        v-bind:key="item.id">
+      </todo-item>
+    </ol>
+  </div>
+
 </body>
 <script src="app.js"></script>
 </html>
