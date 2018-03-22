@@ -36,3 +36,22 @@
       ]
     }
   })
+  
+  var app5 = new Vue({
+    el: '#app5', 
+    data: {
+      message: 'hello world'
+    },
+    methods: {
+      reverseMessage: function() {
+        this.message = this.message.split('').reverse().join('')
+      }
+    }
+  })
+
+  var app6 = new Vue({
+    el: '#app6',
+    data: {
+      message: 'hello world'
+    }
+  })
